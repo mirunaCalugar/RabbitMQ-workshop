@@ -1,19 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "tc8OZy83Wt4=",
+  "dgSpecHash": "eU1w5n4707E=",
   "success": true,
   "projectFilePath": "C:\\Users\\miruna.calugar\\TaskSchedulerApp\\ApiService\\ApiService.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\google.protobuf\\3.23.4\\google.protobuf.3.23.4.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.core.api\\2.54.0\\grpc.core.api.2.54.0.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.net.client\\2.54.0\\grpc.net.client.2.54.0.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.net.common\\2.54.0\\grpc.net.common.2.54.0.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.tools\\2.54.0\\grpc.tools.2.54.0.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\google.protobuf\\3.27.2\\google.protobuf.3.27.2.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.core.api\\2.56.0\\grpc.core.api.2.56.0.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.net.client\\2.56.0\\grpc.net.client.2.56.0.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.net.common\\2.56.0\\grpc.net.common.2.56.0.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\grpc.tools\\2.56.0\\grpc.tools.2.56.0.nupkg.sha512",
     "C:\\Users\\miruna.calugar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\miruna.calugar\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.18\\microsoft.netcore.app.ref.8.0.18.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.18\\microsoft.windowsdesktop.app.ref.8.0.18.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.18\\microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512",
+    "C:\\Users\\miruna.calugar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.18\\microsoft.netcore.app.host.win-x64.8.0.18.nupkg.sha512"
   ],
   "logs": []
 }

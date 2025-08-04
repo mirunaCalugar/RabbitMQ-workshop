@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {
-      "Google.Protobuf/3.23.4": {
+    "net8.0": {
+      "Google.Protobuf/3.27.2": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -15,11 +15,8 @@
           }
         }
       },
-      "Grpc.Core.Api/2.54.0": {
+      "Grpc.Core.Api/2.56.0": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
         "compile": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
@@ -31,10 +28,10 @@
           }
         }
       },
-      "Grpc.Net.Client/2.54.0": {
+      "Grpc.Net.Client/2.56.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.54.0",
+          "Grpc.Net.Common": "2.56.0",
           "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
         },
         "compile": {
@@ -48,10 +45,10 @@
           }
         }
       },
-      "Grpc.Net.Common/2.54.0": {
+      "Grpc.Net.Common/2.56.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.54.0"
+          "Grpc.Core.Api": "2.56.0"
         },
         "compile": {
           "lib/net7.0/Grpc.Net.Common.dll": {
@@ -64,7 +61,7 @@
           }
         }
       },
-      "Grpc.Tools/2.54.0": {
+      "Grpc.Tools/2.56.0": {
         "type": "package",
         "build": {
           "build/Grpc.Tools.props": {},
@@ -84,40 +81,24 @@
           }
         }
       },
-      "RabbitMQ.Client/7.1.2": {
+      "RabbitMQ.Client/6.8.1": {
         "type": "package",
         "dependencies": {
-          "System.IO.Pipelines": "8.0.0",
-          "System.Threading.RateLimiting": "8.0.0"
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
         },
         "compile": {
-          "lib/net8.0/RabbitMQ.Client.dll": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/RabbitMQ.Client.dll": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
             "related": ".xml"
           }
         }
       },
-      "System.IO.Pipelines/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Memory/4.5.3": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -126,15 +107,15 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "System.Threading.RateLimiting/8.0.0": {
+      "System.Threading.Channels/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.Threading.RateLimiting.dll": {
+          "lib/net7.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Threading.RateLimiting.dll": {
+          "lib/net7.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
@@ -145,14 +126,14 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.23.4": {
-      "sha512": "DF+mB+Fwan5Hm5dnbKbrIl7C5ypMr8tJJheutkYgFXCoM88HfBNo2qYO60CEf6fvEe/fhCGtvfEBCoCIhIn7dQ==",
+    "Google.Protobuf/3.27.2": {
+      "sha512": "0wdgA3LO9mBS477jieBFs4pU1sWhVtwv/P+i9nAEiFDQyUA7PPHDBbJL1CeqYtV18jLiq9og4n7wSVCO171OBg==",
       "type": "package",
-      "path": "google.protobuf/3.23.4",
+      "path": "google.protobuf/3.27.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.23.4.nupkg.sha512",
+        "google.protobuf.3.27.2.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -168,15 +149,15 @@
         "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
-    "Grpc.Core.Api/2.54.0": {
-      "sha512": "HGYVdRby+eE+SjcbTQuBmm7tLF+B3joUW1P3QBbqijlLUKDtbmuzll1xdHrm1jgOnZHEHDP70tzyVJdIZv8K2Q==",
+    "Grpc.Core.Api/2.56.0": {
+      "sha512": "9owvft0MG5ZKFNdkNvpF2ePEs/Ggg1UgByQ0Dpubf1r95FyHV9Xit27+9pgE6/CodB0Ij0VfrB+5wJ+6ssJ3Lw==",
       "type": "package",
-      "path": "grpc.core.api/2.54.0",
+      "path": "grpc.core.api/2.56.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.core.api.2.54.0.nupkg.sha512",
+        "grpc.core.api.2.56.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net462/Grpc.Core.Api.dll",
         "lib/net462/Grpc.Core.Api.pdb",
@@ -193,16 +174,19 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Client/2.54.0": {
-      "sha512": "sq0yEtTR8VulwYieCfPK+WdVL6QY1AmCxiRpGy60DVF7zBIaBbG/WxERmOJ3Gr1hvwOkM2WIa7dWtBJGg4hgWQ==",
+    "Grpc.Net.Client/2.56.0": {
+      "sha512": "SVVzApBpESvYJB9x31t3TWqj+9Earw1sG6PUgCGY/jh4lPA+y3WNru7qI4KTIBjerJR9+p4MlRKxZbnCCBfkRg==",
       "type": "package",
-      "path": "grpc.net.client/2.54.0",
+      "path": "grpc.net.client/2.56.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.net.client.2.54.0.nupkg.sha512",
+        "grpc.net.client.2.56.0.nupkg.sha512",
         "grpc.net.client.nuspec",
+        "lib/net462/Grpc.Net.Client.dll",
+        "lib/net462/Grpc.Net.Client.pdb",
+        "lib/net462/Grpc.Net.Client.xml",
         "lib/net5.0/Grpc.Net.Client.dll",
         "lib/net5.0/Grpc.Net.Client.pdb",
         "lib/net5.0/Grpc.Net.Client.xml",
@@ -221,14 +205,14 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Common/2.54.0": {
-      "sha512": "PsDnycaeaOpWvwMaRuggkN63deiW6nUj2LcG8iu2JRNL6if0vPRxY/RDeTulyKmp7c1m1pMk5qmc7WFaOKok0g==",
+    "Grpc.Net.Common/2.56.0": {
+      "sha512": "ajflN6MVJC3Nr1KBkqQ7X8nBYwAZredrodVfdtFqh8lltuYg8reosIOAOQtd0Qnxvw9DrIqg4h4VO80H0RND3Q==",
       "type": "package",
-      "path": "grpc.net.common/2.54.0",
+      "path": "grpc.net.common/2.56.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.net.common.2.54.0.nupkg.sha512",
+        "grpc.net.common.2.56.0.nupkg.sha512",
         "grpc.net.common.nuspec",
         "lib/net5.0/Grpc.Net.Common.dll",
         "lib/net5.0/Grpc.Net.Common.pdb",
@@ -248,10 +232,10 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Tools/2.54.0": {
-      "sha512": "E+c9vTTSM1AHX5085MeF4J6QS0qACiz0Svm2zk+/F6gjuSo178gMLn7n6jMOSdF6OEHde5Cm86ouD8X49SrVbA==",
+    "Grpc.Tools/2.56.0": {
+      "sha512": "e63/x4belx+nj84o31nssKhIvwmntTT+hesW2lJs/3UZ6hpVy5KgVEtqRVq1mD007YJ24e8d0Jw4cgFVeD9eHg==",
       "type": "package",
-      "path": "grpc.tools/2.54.0",
+      "path": "grpc.tools/2.56.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -281,7 +265,7 @@
         "build/native/include/google/protobuf/timestamp.proto",
         "build/native/include/google/protobuf/type.proto",
         "build/native/include/google/protobuf/wrappers.proto",
-        "grpc.tools.2.54.0.nupkg.sha512",
+        "grpc.tools.2.56.0.nupkg.sha512",
         "grpc.tools.nuspec",
         "packageIcon.png",
         "tools/linux_arm64/grpc_csharp_plugin",
@@ -312,109 +296,82 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
-    "RabbitMQ.Client/7.1.2": {
-      "sha512": "y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
+    "RabbitMQ.Client/6.8.1": {
+      "sha512": "jNsmGgmCNw2S/NzskeN2ijtGywtH4Sk/G6jWUTD5sY9SrC27Xz6BsLIiB8hdsfjeyWCa4j4GvCIGkpE8wrjU1Q==",
       "type": "package",
-      "path": "rabbitmq.client/7.1.2",
+      "path": "rabbitmq.client/6.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
-        "lib/net8.0/RabbitMQ.Client.dll",
-        "lib/net8.0/RabbitMQ.Client.xml",
+        "lib/net462/RabbitMQ.Client.dll",
+        "lib/net462/RabbitMQ.Client.xml",
         "lib/netstandard2.0/RabbitMQ.Client.dll",
         "lib/netstandard2.0/RabbitMQ.Client.xml",
-        "rabbitmq.client.7.1.2.nupkg.sha512",
+        "rabbitmq.client.6.8.1.nupkg.sha512",
         "rabbitmq.client.nuspec"
       ]
     },
-    "System.IO.Pipelines/8.0.0": {
-      "sha512": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.io.pipelines/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.IO.Pipelines.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
-        "lib/net462/System.IO.Pipelines.dll",
-        "lib/net462/System.IO.Pipelines.xml",
-        "lib/net6.0/System.IO.Pipelines.dll",
-        "lib/net6.0/System.IO.Pipelines.xml",
-        "lib/net7.0/System.IO.Pipelines.dll",
-        "lib/net7.0/System.IO.Pipelines.xml",
-        "lib/net8.0/System.IO.Pipelines.dll",
-        "lib/net8.0/System.IO.Pipelines.xml",
-        "lib/netstandard2.0/System.IO.Pipelines.dll",
-        "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.8.0.0.nupkg.sha512",
-        "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
-      "type": "package",
-      "path": "system.memory/4.5.3",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.4.5.5.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Threading.RateLimiting/8.0.0": {
-      "sha512": "7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
+    "System.Threading.Channels/7.0.0": {
+      "sha512": "qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "type": "package",
-      "path": "system.threading.ratelimiting/8.0.0",
+      "path": "system.threading.channels/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Threading.RateLimiting.targets",
+        "buildTransitive/net461/System.Threading.Channels.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Threading.RateLimiting.targets",
-        "lib/net462/System.Threading.RateLimiting.dll",
-        "lib/net462/System.Threading.RateLimiting.xml",
-        "lib/net6.0/System.Threading.RateLimiting.dll",
-        "lib/net6.0/System.Threading.RateLimiting.xml",
-        "lib/net7.0/System.Threading.RateLimiting.dll",
-        "lib/net7.0/System.Threading.RateLimiting.xml",
-        "lib/net8.0/System.Threading.RateLimiting.dll",
-        "lib/net8.0/System.Threading.RateLimiting.xml",
-        "lib/netstandard2.0/System.Threading.RateLimiting.dll",
-        "lib/netstandard2.0/System.Threading.RateLimiting.xml",
-        "system.threading.ratelimiting.8.0.0.nupkg.sha512",
-        "system.threading.ratelimiting.nuspec",
+        "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
+        "lib/net462/System.Threading.Channels.dll",
+        "lib/net462/System.Threading.Channels.xml",
+        "lib/net6.0/System.Threading.Channels.dll",
+        "lib/net6.0/System.Threading.Channels.xml",
+        "lib/net7.0/System.Threading.Channels.dll",
+        "lib/net7.0/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "lib/netstandard2.1/System.Threading.Channels.dll",
+        "lib/netstandard2.1/System.Threading.Channels.xml",
+        "system.threading.channels.7.0.0.nupkg.sha512",
+        "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
     }
   },
   "projectFileDependencyGroups": {
-    "net9.0": [
-      "Google.Protobuf >= 3.23.4",
-      "Grpc.Net.Client >= 2.54.0",
-      "Grpc.Tools >= 2.54.0",
-      "RabbitMQ.Client >= 7.1.2"
+    "net8.0": [
+      "Google.Protobuf >= 3.27.2",
+      "Grpc.Net.Client >= 2.56.0",
+      "Grpc.Tools >= 2.56.0",
+      "RabbitMQ.Client >= 6.8.1"
     ]
   },
   "packageFolders": {
@@ -433,14 +390,14 @@
         "C:\\Users\\miruna.calugar\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net9.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -457,25 +414,25 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net9.0": {
-        "targetAlias": "net9.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "Google.Protobuf": {
             "target": "Package",
-            "version": "[3.23.4, )"
+            "version": "[3.27.2, )"
           },
           "Grpc.Net.Client": {
             "target": "Package",
-            "version": "[2.54.0, )"
+            "version": "[2.56.0, )"
           },
           "Grpc.Tools": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.54.0, )"
+            "version": "[2.56.0, )"
           },
           "RabbitMQ.Client": {
             "target": "Package",
-            "version": "[7.1.2, )"
+            "version": "[6.8.1, )"
           }
         },
         "imports": [
@@ -489,6 +446,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.18, 8.0.18]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.18, 8.0.18]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.18, 8.0.18]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.18, 8.0.18]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

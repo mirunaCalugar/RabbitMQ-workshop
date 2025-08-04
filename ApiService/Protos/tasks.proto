@@ -4,6 +4,13 @@ option csharp_namespace = "SchedulerService";
 
 package scheduler;
 
+// Modelul unui task
+message TaskResponse {
+  string id = 1;
+  string name = 2;
+  bool isRunning = 3;
+}
+
 // Request pentru creare task
 message TaskRequest {
   string id = 1;
@@ -15,25 +22,22 @@ message TaskDeleteRequest {
   string id = 1;
 }
 
-// Request/Response pentru operații fără rezultat
-message Empty {}
-
-// Răspuns pentru un task
-message TaskResponse {
+// Request doar cu ID (pentru schedule/unschedule)
+message TaskId {
   string id = 1;
-  string name = 2;
-  bool isRunning = 3;
 }
 
-// Răspuns pentru listă de task-uri
+// Răspuns pentru listă de taskuri
 message TaskListResponse {
   repeated TaskResponse tasks = 1;
 }
 
-// Definim serviciul gRPC
+// Serviciul gRPC
 service TaskScheduler {
   rpc CreateTask (TaskRequest) returns (TaskResponse);
-  rpc DeleteTask (TaskDeleteRequest) returns (Empty);
-  rpc GetAllTasks (Empty) returns (TaskListResponse);
-  rpc GetRunningTasks (Empty) returns (TaskListResponse);
+  rpc DeleteTask (TaskDeleteRequest) returns (.google.protobuf.Empty);
+  rpc GetAllTasks (.google.protobuf.Empty) returns (TaskListResponse);
+  rpc GetRunningTasks (.google.protobuf.Empty) returns (TaskListResponse);
+  rpc ScheduleTask (TaskId) returns (.google.protobuf.Empty);
+  rpc UnscheduleTask (TaskId) returns (.google.protobuf.Empty);
 }

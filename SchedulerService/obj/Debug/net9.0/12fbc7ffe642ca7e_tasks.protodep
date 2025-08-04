@@ -1,2 +1,3 @@
 obj\Debug\net9.0\Protos/Tasks.cs \
-obj\Debug\net9.0\Protos/TasksGrpc.cs: Protos/tasks.proto
+obj\Debug\net9.0\Protos/TasksGrpc.cs: C:/Users/miruna.calugar/.nuget/packages/grpc.tools/2.71.0/build/native/include/google/protobuf/empty.proto\
+ Protos/tasks.proto

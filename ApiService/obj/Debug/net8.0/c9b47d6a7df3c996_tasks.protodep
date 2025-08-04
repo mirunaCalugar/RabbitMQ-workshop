@@ -1,0 +1,3 @@
+obj\Debug\net8.0/Tasks.cs \
+obj\Debug\net8.0/TasksGrpc.cs: C:/Users/miruna.calugar/.nuget/packages/grpc.tools/2.56.0/build/native/include/google/protobuf/empty.proto\
+ ../SchedulerService/Protos/tasks.proto

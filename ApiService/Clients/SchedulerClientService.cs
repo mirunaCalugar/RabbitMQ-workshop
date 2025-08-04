@@ -1,6 +1,5 @@
 using Grpc.Net.Client;
-using SchedulerService;
-
+using SchedulerService; 
 public class SchedulerClientService
 {
     private readonly SchedulerService.TaskScheduler.TaskSchedulerClient _client;
@@ -15,4 +14,24 @@ public class SchedulerClientService
     {
         return await _client.CreateTaskAsync(new TaskRequest { Id = id, Name = name });
     }
+
+    public async Task DeleteTask(string id)
+    {
+        await _client.DeleteTaskAsync(new TaskDeleteRequest { Id = id });
+    }
+
+    public async Task<TaskListResponse> GetAllTasks()
+    {
+        return await _client.GetAllTasksAsync(new Empty());
+    }
+
+    public async Task<TaskListResponse> GetRunningTasks()
+    {
+        return await _client.GetRunningTasksAsync(new Empty());
+    }
+}
+
+internal class TaskDeleteRequest
+{
+    public string Id { get; set; }
 }

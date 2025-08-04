@@ -1,7 +1,7 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace SchedulerService.Services
 {
@@ -11,26 +11,51 @@ namespace SchedulerService.Services
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             var connection = await factory.CreateConnectionAsync();
-            var channel = await connection.CreateChannelAsync();
 
-            await channel.ExchangeDeclareAsync(exchange: "task_exchange", type: "fanout");
-            var queueOk = await channel.QueueDeclareAsync();
-            var queueName = queueOk.QueueName;
+            // --------- 1. Consumer pentru scheduling ---------
+            var scheduleChannel = await connection.CreateChannelAsync();
+            await scheduleChannel.QueueDeclareAsync("schedule_queue", durable: false, exclusive: false, autoDelete: false);
 
-            await channel.QueueBindAsync(queue: queueName, exchange: "task_exchange", routingKey: "");
-
-            var consumer = new AsyncEventingBasicConsumer(channel);
-            consumer.ReceivedAsync += async (sender, ea) =>
+            var scheduleConsumer = new AsyncEventingBasicConsumer(scheduleChannel);
+            scheduleConsumer.ReceivedAsync += async (sender, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                Console.WriteLine($"[x] Received {message}");
+                var data = JsonSerializer.Deserialize<Dictionary<string, string>>(message);
+
+                if (data != null && data.ContainsKey("task_id") && data.ContainsKey("action"))
+                {
+                    var taskId = data["task_id"];
+                    var action = data["action"];
+                    Console.WriteLine($"[Schedule] Received '{action}' for task {taskId}");
+
+                    TaskSchedulerService.UpdateTaskStatus(taskId, action == "schedule");
+                }
+
                 await Task.Yield();
             };
 
-            await channel.BasicConsumeAsync(queue: queueName, autoAck: true, consumer: consumer);
+            await scheduleChannel.BasicConsumeAsync("schedule_queue", autoAck: true, consumer: scheduleConsumer);
 
-            Console.WriteLine(" [*] Waiting for messages...");
+            // --------- 2. Consumer pentru notificări fanout ---------
+            var notifyChannel = await connection.CreateChannelAsync();
+            await notifyChannel.ExchangeDeclareAsync(exchange: "task_exchange", type: "fanout");
+            var queueOk = await notifyChannel.QueueDeclareAsync();
+            var notifyQueue = queueOk.QueueName;
+            await notifyChannel.QueueBindAsync(queue: notifyQueue, exchange: "task_exchange", routingKey: "");
+
+            var notifyConsumer = new AsyncEventingBasicConsumer(notifyChannel);
+            notifyConsumer.ReceivedAsync += async (sender, ea) =>
+            {
+                var body = ea.Body.ToArray();
+                var message = Encoding.UTF8.GetString(body);
+                Console.WriteLine($"[Notify] Broadcast received: {message}");
+                await Task.Yield();
+            };
+
+            await notifyChannel.BasicConsumeAsync(queue: notifyQueue, autoAck: true, consumer: notifyConsumer);
+
+            Console.WriteLine(" [*] Waiting for schedule messages and notifications...");
         }
     }
 }
