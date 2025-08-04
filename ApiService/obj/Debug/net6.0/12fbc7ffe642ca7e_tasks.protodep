@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Tasks.cs \
+obj\Debug\net6.0\Protos/TasksGrpc.cs: Protos/tasks.proto

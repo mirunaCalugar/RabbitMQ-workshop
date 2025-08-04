@@ -1,0 +1,157 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ApiService/1.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.23.4",
+          "Grpc.Net.Client": "2.54.0",
+          "Grpc.Tools": "2.54.0",
+          "RabbitMQ.Client": "6.5.0"
+        },
+        "runtime": {
+          "ApiService.dll": {}
+        }
+      },
+      "Google.Protobuf/3.23.4": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.23.4.0",
+            "fileVersion": "3.23.4.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.54.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.54.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.54.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.54.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.54.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.54.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.54.0"
+        },
+        "runtime": {
+          "lib/net6.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.54.0.0"
+          }
+        }
+      },
+      "Grpc.Tools/2.54.0": {},
+      "Microsoft.Extensions.Logging.Abstractions/3.0.3": {},
+      "RabbitMQ.Client/6.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.5.0.0"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
+      "System.Threading.Channels/7.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Threading.Channels.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApiService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.Protobuf/3.23.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DF+mB+Fwan5Hm5dnbKbrIl7C5ypMr8tJJheutkYgFXCoM88HfBNo2qYO60CEf6fvEe/fhCGtvfEBCoCIhIn7dQ==",
+      "path": "google.protobuf/3.23.4",
+      "hashPath": "google.protobuf.3.23.4.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.54.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HGYVdRby+eE+SjcbTQuBmm7tLF+B3joUW1P3QBbqijlLUKDtbmuzll1xdHrm1jgOnZHEHDP70tzyVJdIZv8K2Q==",
+      "path": "grpc.core.api/2.54.0",
+      "hashPath": "grpc.core.api.2.54.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.54.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sq0yEtTR8VulwYieCfPK+WdVL6QY1AmCxiRpGy60DVF7zBIaBbG/WxERmOJ3Gr1hvwOkM2WIa7dWtBJGg4hgWQ==",
+      "path": "grpc.net.client/2.54.0",
+      "hashPath": "grpc.net.client.2.54.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.54.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PsDnycaeaOpWvwMaRuggkN63deiW6nUj2LcG8iu2JRNL6if0vPRxY/RDeTulyKmp7c1m1pMk5qmc7WFaOKok0g==",
+      "path": "grpc.net.common/2.54.0",
+      "hashPath": "grpc.net.common.2.54.0.nupkg.sha512"
+    },
+    "Grpc.Tools/2.54.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E+c9vTTSM1AHX5085MeF4J6QS0qACiz0Svm2zk+/F6gjuSo178gMLn7n6jMOSdF6OEHde5Cm86ouD8X49SrVbA==",
+      "path": "grpc.tools/2.54.0",
+      "hashPath": "grpc.tools.2.54.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m2Jyi/MEn043WMI1I6J1ALuCThktZ93rd7eqzYeLmMcA0bdZC+TBVl0LuEbEWM01dWeeBjOoagjNwQTzOi2r6A==",
+      "path": "microsoft.extensions.logging.abstractions/3.0.3",
+      "hashPath": "microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512"
+    },
+    "RabbitMQ.Client/6.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9hY5HiWPtCla1/l0WmXmLnqoX7iKE3neBQUWnetIJrRpOvTbO//XQfQDh++xgHCshL40Kv/6bR0HDkmJz46twg==",
+      "path": "rabbitmq.client/6.5.0",
+      "hashPath": "rabbitmq.client.6.5.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "System.Threading.Channels/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
+      "path": "system.threading.channels/7.0.0",
+      "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
+    }
+  }
+}

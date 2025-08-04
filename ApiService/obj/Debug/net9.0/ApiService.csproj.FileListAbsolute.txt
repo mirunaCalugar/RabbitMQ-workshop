@@ -1,0 +1,14 @@
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\ApiService.exe
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\ApiService.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\Google.Protobuf.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\Grpc.Core.Api.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\Grpc.Net.Client.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\Grpc.Net.Common.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.csproj.AssemblyReference.cache
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.AssemblyInfoInputs.cache
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.AssemblyInfo.cs
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.csproj.CoreCompileInputs.cache
+C:\Users\miruna.calugar\TaskSchedulerApp\ApiService\obj\Debug\net9.0\ApiService.MvcApplicationPartsAssemblyInfo.cache

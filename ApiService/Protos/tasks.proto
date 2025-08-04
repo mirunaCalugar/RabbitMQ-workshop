@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "SchedulerService";
+
+package scheduler;
+
+// Request pentru creare task
+message TaskRequest {
+  string id = 1;
+  string name = 2;
+}
+
+// Request pentru ștergere task
+message TaskDeleteRequest {
+  string id = 1;
+}
+
+// Request/Response pentru operații fără rezultat
+message Empty {}
+
+// Răspuns pentru un task
+message TaskResponse {
+  string id = 1;
+  string name = 2;
+  bool isRunning = 3;
+}
+
+// Răspuns pentru listă de task-uri
+message TaskListResponse {
+  repeated TaskResponse tasks = 1;
+}
+
+// Definim serviciul gRPC
+service TaskScheduler {
+  rpc CreateTask (TaskRequest) returns (TaskResponse);
+  rpc DeleteTask (TaskDeleteRequest) returns (Empty);
+  rpc GetAllTasks (Empty) returns (TaskListResponse);
+  rpc GetRunningTasks (Empty) returns (TaskListResponse);
+}

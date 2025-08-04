@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "SchedulerService";
+
+package scheduler;
+
+message TaskRequest {
+  string id = 1;
+  string name = 2;
+}
+
+message TaskDeleteRequest {
+  string id = 1;
+}
+
+message Empty {}
+
+message TaskResponse {
+  string id = 1;
+  string name = 2;
+  bool isRunning = 3;
+}
+
+message TaskListResponse {
+  repeated TaskResponse tasks = 1;
+}
+
+service TaskScheduler {
+  rpc CreateTask (TaskRequest) returns (TaskResponse);
+  rpc DeleteTask (TaskDeleteRequest) returns (Empty);
+  rpc GetAllTasks (Empty) returns (TaskListResponse);
+  rpc GetRunningTasks (Empty) returns (TaskListResponse);
+}
